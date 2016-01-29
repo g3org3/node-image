@@ -5,7 +5,6 @@ FROM ubuntu
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update
 RUN apt-get install -y git vim build-essential curl
-RUN service supervisor start
 
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 4.2.1
@@ -18,4 +17,3 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | b
     && nvm use default
 
 RUN mkdir /app
-COPY app.conf /etc/supervisor/conf.d/app.conf

@@ -1,10 +1,10 @@
+FROM ubuntu:14.04
 MAINTAINER George <7jagjag@gmail.com>
-FROM ubuntu
 
 # Install dependencies
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update
-RUN apt-get install -y git vim build-essential curl
+RUN apt-get install -y git vim build-essential curl supervisor
 RUN service supervisor start
 
 ENV NVM_DIR /usr/local/nvm

@@ -1,5 +1,5 @@
+FROM ubuntu:14.04
 MAINTAINER George <7jagjag@gmail.com>
-FROM ubuntu
 
 # Install dependencies
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh

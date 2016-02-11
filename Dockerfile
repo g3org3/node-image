@@ -4,8 +4,7 @@ MAINTAINER George <7jagjag@gmail.com>
 # Install dependencies
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update
-RUN apt-get install -y git vim build-essential curl supervisor
-RUN service supervisor start
+RUN apt-get install -y git vim build-essential curl
 
 ENV NVM_DIR /usr/local/nvm
 
@@ -22,4 +21,3 @@ RUN cp /usr/local/nvm/versions/node/$NODE_VERSION/bin/node /bin/
 RUN ln -s /usr/local/nvm/versions/node/$NODE_VERSION/lib/node_modules/npm/bin/npm-cli.js /bin/npm
 
 RUN mkdir /app
-COPY app.conf /etc/supervisor/conf.d/app.conf

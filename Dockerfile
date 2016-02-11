@@ -22,4 +22,3 @@ RUN cp /usr/local/nvm/versions/node/$NODE_VERSION/bin/node /bin/
 RUN ln -s /usr/local/nvm/versions/node/$NODE_VERSION/lib/node_modules/npm/bin/npm-cli.js /bin/npm
 
 RUN mkdir /app
-COPY app.conf /etc/supervisor/conf.d/app.conf

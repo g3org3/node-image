@@ -1,0 +1,11 @@
+build:
+  image: swarm
+  commands:
+    - echo "done"
+
+publish:
+  docker:
+    username: $$user
+    password: $$password
+    email: $$email
+    repo: $$repo
